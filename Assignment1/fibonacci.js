@@ -16,9 +16,11 @@ function fibs(number) {
 }
 
 function fibsRec(number) {
-  if (number === 1) {
+  if (number <= 0) {
+    return [];
+  } else if (number == 1) {
     return [0];
-  } else if (number === 2) {
+  } else if (number == 2) {
     return [0, 1];
   } else {
     return [
