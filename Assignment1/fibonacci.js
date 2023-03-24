@@ -28,5 +28,13 @@ function fibsRec(number) {
   }
 }
 
-console.log(fibs(8));
-console.log(fibsRec(8));
+const readline = require("readline").createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+readline.question("Length of Fibonacci Sequence: ", (length) => {
+  console.log("Iteratively: ", fibs(length));
+  console.log("Recursively: ", fibsRec(length));
+  readline.close();
+});
